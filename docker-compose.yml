@@ -9,12 +9,54 @@ services:
       interval: 5s
       timeout: 2s
       retries: 5
-
+  student06:
+    build: ./services/student06
+    container_name: student06
+    ports:
+      - "8106:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 5s
+      timeout: 2s
+      retries: 5    
   student11:
     build: ./services/student11
     container_name: student11
     ports:
       - "8111:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 5s
+      timeout: 2s
+      retries: 5
+  
+  student12:
+    build: ./services/student12
+    container_name: student12
+    ports:
+      - "8112:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 5s
+      timeout: 2s
+      retries: 5
+      
+  student04:
+    build: ./services/student04
+    container_name: student04
+    ports:
+      - "8104:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 5s
+      timeout: 2s
+      retries: 5    
+      
+  student09:
+    build: ./services/student09
+    container_name: student09
+    ports:
+      - "8109:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
       interval: 5s
