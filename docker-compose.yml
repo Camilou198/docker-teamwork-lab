@@ -13,7 +13,7 @@ services:
     build: ./services/student06
     container_name: student06
     ports:
-      - "8106:8080"
+      - "8102:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
       interval: 5s
@@ -23,7 +23,7 @@ services:
     build: ./services/student11
     container_name: student11
     ports:
-      - "8111:8080"
+      - "8103:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
       interval: 5s
@@ -34,7 +34,7 @@ services:
     build: ./services/student12
     container_name: student12
     ports:
-      - "8112:8080"
+      - "8104:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
       interval: 5s
@@ -45,7 +45,7 @@ services:
     build: ./services/student04
     container_name: student04
     ports:
-      - "8104:8080"
+      - "8105:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
       interval: 5s
@@ -56,7 +56,7 @@ services:
     build: ./services/student07
     container_name: student07
     ports:
-      - "8116:8080"
+      - "8106:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
       interval: 5s
@@ -67,7 +67,7 @@ services:
     build: ./services/student08
     container_name: student08
     ports:
-      - "8108:8080"
+      - "8107:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
       interval: 5s
@@ -78,7 +78,7 @@ services:
     build: ./services/student09
     container_name: student09
     ports:
-      - "8109:8080"
+      - "8108:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
       interval: 5s
