@@ -1,6 +1,7 @@
-FROM node:20-alpine
-WORKDIR /app
-COPY app/ /app/
-RUN npm init -y && npm install express
+FROM busybox:stable
+WORKDIR /srv
+RUN printf "Hello, I am Jesus David Betancourth Lopez\n" > index.html \
+    && printf "ok\n" > health
+
 EXPOSE 8080
-CMD ["node", "server.js"]
+CMD ["sh", "-c", "httpd -f -p 8080 -h /srv"]
